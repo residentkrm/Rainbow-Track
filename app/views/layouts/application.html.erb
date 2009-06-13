@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="author" content="Wink Hosting (www.winkhosting.com)" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<%= javascript_include_tag :defaults %>
+	<%= active_scaffold_includes %>
+	<%= stylesheet_link_tag 'cash' %>
+<title>Rainbow Track</title>
+</head>
+<body>
+	<div id="page" align="center">
+		<div id="toppage" align="center">
+			<div id="date">
+				<div class="smalltext" style="padding:13px;"><strong><%= Time.new.strftime('%B %d, %Y') %></strong></div>
+			</div>
+			<div id="topbar">
+				<div align="right" style="padding:12px;" class="smallwhitetext"></div>
+			</div>
+		</div>
+		<div id="header" align="center">
+         <div class="titletext" id="logo">
+            <div class="logotext" style="margin:30px">Ha<span class="orangelogotext">$</span>h</div> 
+         </div>
+         <div id="pagetitle">
+            <div id="title" class="titletext" align="right">Rainbow Track</div>
+         </div>
+		</div>
+		<div id="content" align="center">
+			<div id="menu" align="right">
+				<div align="right" style="width:189px; height:8px;"><img src="images/mnu_topshadow.gif" width="189" height="8" alt="mnutopshadow" /></div>
+				<div id="linksmenu" align="center">
+					<%= link_to 'Hashes', { :controller => 'hash_values' } %>
+					<%= link_to 'Hosts', { :controller => 'hosts' } %>
+					<%= link_to 'Hash Types', { :controller => 'hash_types' } %>
+					<%= link_to 'Hash Statuses', { :controller => 'hash_statuses' } %>
+					<%= link_to 'Users', { :controller => 'users' } %>
+					<%= link_to 'Sessions', { :controller => 'sessions' } %>
+					<%= link_to 'Session Statuses', { :controller => 'session_statuses' } %>
+					<%= link_to 'Configuration', { :controller => 'global_configs' } %>
+				</div>
+				<div align="right" style="width:189px; height:8px;"><img src="images/mnu_bottomshadow.gif" width="189" height="8" alt="mnubottomshadow" /></div>
+			</div>
+		<div id="contenttext">
+			<div class="bodytext" style="padding:12px;" align="justify">
+				<%= yield %>
+			</div>
+		</div>
+		<div id="footer" class="smallgraytext" align="center">
+		</div>
+	</div>
+</body>
+</html>

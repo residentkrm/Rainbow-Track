@@ -1,0 +1,26 @@
+<% form_tag(url_for(:action => 'upload_dump'), :multipart => true) do %>
+	<table>
+		<tr>
+			<td>
+				<label for="upload_file">Select File</label> : 
+			</td>
+			
+			<td>
+				<%= file_field 'upload', 'datafile' %><br />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Host:
+			</td>
+			<td>
+				<%= select("selected_host", "id", Host.find(:all)) %><br />
+			</td>
+		</tr>
+		<tr>
+			<td colspan='2' align='left'>
+				<%= submit_tag "Upload" %>
+			</td>
+		</tr>
+	</table>	
+<% end %>

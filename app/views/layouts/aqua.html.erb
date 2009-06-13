@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta name="author" content="Wink Hosting (www.winkhosting.com)" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<%= stylesheet_link_tag 'aqua' %>
+	<%= javascript_include_tag :defaults %>
+	<%= active_scaffold_includes %>
+	
+	<title>Aqua</title>
+</head>
+<body>
+	<div id="page" align="center">
+		<div id="header">
+			<div id="companyname" align="left">Aqua</div>
+			<div align="right" class="links_menu" id="menu"><a href="#">Home</a> | <a href="#">About Us</a> | <a href="#">Products</a> | <a href="#">Our Services</a> | <a href="#">Contact Us</a> </div>
+		</div>
+		<br />
+		<div id="content">
+			<div id="leftpanel">
+				<div class="table_top">
+					<span class="title_panel">Links</span>
+				</div>
+				<div class="table_content">
+					<div class="table_text">
+						<span class="news_more"><%= link_to 'Products', :controller => 'product'%></span><br />
+						<span class="news_more"><%= link_to 'Orders', :controller => 'orders'%></span><br />
+						<span class="news_more"><%= link_to 'Payments', :controller => 'payments'%></span><br />
+						<span class="news_more"><%= link_to 'Payment Types', :controller => 'payment_types'%></span><br />
+						<span class="news_more"><%= link_to 'Customers', :controller => 'customers'%></span><br />
+						<span class="news_more"><%= link_to 'Categories', :controller => 'categories'%></span><br />
+						<span class="news_more"><%= link_to 'Subcategories', :controller => 'subcategories'%></span><br />
+					</div>
+				</div>
+				<div class="table_bottom">
+					<img src="images/table_bottom.jpg" width="204" height="23" border="0" alt="" />
+				</div>
+				<br />
+			</div>
+			<div id="contenttext">
+				<p class="body_text" align="justify">
+					<%= yield %>
+				</p>
+			</div>
+			<br />
+			<br />
+			<div class="footer">
+				<br />
+				<a href="#">Home</a> | <a href="#">About Us</a> | <a href="#">Products</a> | <a href="#">Our Services</a> | <a href="#">Contact Us</a> | Your Company Name. Designed by <a href="http://www.winkhosting.com/">Wink Hosting</a>.
+			</div>
+		</div>
+	</div>
+</body>
+</html>
